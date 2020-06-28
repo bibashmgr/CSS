@@ -1,1 +1,1 @@
-> This repo. is created during my self-study on CSS while doing projectwork at home during the lockdown period.
+*This repo. is created while doing my self-study on CSS at home during the lockdown period.*
