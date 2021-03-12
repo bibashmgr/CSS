@@ -73,4 +73,108 @@ font-variant: normal|small-caps;
 ### CSS Font Size:
 
 The `font-size`property sets the size of the text.
+__CSS Syntax:__
+```css
+    font-size: px|em|%|vw;
+    /* 1 em = 16px; */
+    /* vw = veiwport width */
+```
 
+### CSS Font Shorthanded:
+To shorten the code, it is also possible to specify all the individual font properties in one property called `font`.
+__CSS Syntax:__
+```css
+    font: font-style font-variant font-weight font-size/line-height font-family;
+```
+For exapmle:
+```css
+    p {
+        font: italic small-caps bold 12px/30px Georgia, serif;
+    }
+```
+
+### CSS Google Fonts:
+
+If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.
+
+Just add a special style sheet link in the <head> section and then refer to the font in the CSS.
+__CSS Syntax:__
+```css
+<head>
+    <link rel="stylesheet" href="url">
+    <style>
+        font-family: familyName ;
+    </style>
+</head>
+```
+For example:
+```css
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+        }
+    </style>
+</head>
+
+/* To use multiple Google fonts, just separate the font names with a pipe character (|) */
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+    <style>
+        h1.a {font-family: "Audiowide", sans-serif;}
+        h1.b {font-family: "Sofia", sans-serif;}
+        h1.c {font-family: "Trirong", serif;}
+    </style>
+</head>
+
+/* in addition you can style Google Fonts */
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+    <style>
+        body {
+            font-family: "Sofia", sans-serif;
+            font-size: 30px;
+            text-shadow: 3px 3px 3px #ababab;
+        }
+    </style>
+</head>
+
+/* Google have also enabled different font effects that you can use. */
+/* First add "effect=effectname" to the Google API, then add a special class name to the element that is going to use the special effect. The class name always starts with "font-effect-" and ends with the "effectname" */
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire">
+    /* adding "effect=fire" */
+    <style>
+    body {
+        font-family: "Sofia", sans-serif;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1 class="font-effect-fire">Sofia on Fire</h1>
+    /* adding special class called "font-effect-fire" */
+
+</body>
+
+/* To request multiple font effects, just separate the effect names with a pipe character (|) */
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple">
+    <style>
+    body {
+        font-family: "Sofia", sans-serif;
+        font-size: 30px;
+    }
+    </style>
+</head>
+<body>
+
+    <h1 class="font-effect-neon">Neon Effect</h1>
+    <h1 class="font-effect-outline">Outline Effect</h1>
+    <h1 class="font-effect-emboss">Emboss Effect</h1>
+    <h1 class="font-effect-shadow-multiple">Multiple Shadow Effect</h1>
+
+</body>
+```
